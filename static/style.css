@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+.home{
+   
+    width: 800px;
+    margin: auto;
+    
+    
+}
+.navbar{
+    padding: 1rem;
+}
+.navbar .logo{
+    float: left;
+}
+.lg-heading{
+    font-size: 2rem;
+    
+}
+.navbar .nav-items{
+    float: right;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+}
+ul li{
+    list-style: none;
+
+}
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+
+}
+.navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.navbar  a:link,
+.navbar  a:visited{
+    color: white;
+}
+.navbar a:hover{
+    border-bottom: 1px solid white;
+}
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.input{
+    
+    width:600px;
+    margin: 0 auto;
+}
+body{
+    color: aliceblue;;
+}
+
+p{
+    font-size: 20px;
+    padding: 3px;
+}
+textarea{
+    background-color: rgb(231, 229, 228);
+}
+h1{
+    color: white;
+    font-weight: 400px;
+}
+h2{
+    color: rgb(240, 240, 246);
+    font-size: 50px;
+    text-align: center;
+}
+.header{
+    position: relative;
+    background: linear-gradient(rgba(80, 79, 79, 0.1), rgb(176, 93, 93)) ,url('img.jpg');
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: rgb(248, 123, 77);
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* ***************** Summarize Page ******************************** */
+.jumbotron{
+    background-color: rgb(247, 189, 83);
+    margin: 50px auto;
+    width: 800px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400px;
+    padding: 20px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.bg-image
+        {
+            background-image: url("img2.jpeg");
+            
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+             /* Full height */
+            height: 100%; 
+            width: 100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+        
+
+.Original_title{
+    background-color: rgb(198, 102, 67);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.Summary_title{
+    /*background-color: rgb(61, 90, 18); */
+    background-color: rgb(33, 129, 137);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.srt{
+    display: flex;
+    flex-direction: row;
+}
+
+.OriginalTxt{
+    background-color: rgb(240, 136, 99);
+    padding: 20px;
+}
+
+.SummaryTxt{
+    background-color: rgb(26, 155, 153);
+    padding: 20px;
+    margin-left: 10px;
+}
+
+#word_length
+{
+    padding-left: 37px;
+}
+
+/* #################################### showcase section styling ######################################### */
+
+.showcase{
+    background: #ddd;
+    padding: 7rem;
+    height: 800px;
+}
+
+.row{
+    height: 500px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px #aaa;
+}
+
+.row1{
+    margin-bottom: 2rem;
+}
+
+.row1 .img-box{
+    float: right;
+    width: 40%;
+}
+
+.md-heading{
+    color:black ;
+    font-size: 2rem;
+}
+
+.text-gray{
+    color: #141313;
+}
+
+.row .img-box{
+    height: 100%;
+}
+.row .text-box{
+    padding: 2rem;
+}
+
+.row .img-box img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ############################# Footer styling ################################## */
+
+.footer{
+    background: #263238;
+    color: #f4f4f4;
+    padding: 1rem;
+    text-align: center; 
+}
+
+.social-media-links i{
+    margin: 1.5rem;
+}
+.foot{
+    font-size: 20px;
+    padding: 2px;
+}

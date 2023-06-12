@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">     
+    <link rel="stylesheet", href="style.css">
+
+    <style>
+        .bg-image
+        {
+            background-image: url("img5.jpeg");
+            
+            /*filter: blur(8px);
+            -webkit-filter: blur(8px);*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="bg-image"></div>
+    
+    <div class="bg-text">
+            <!--<img src="img2.jpeg" alt="photo">-->
+        <div class = "container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                <h1>Content Summarization</h1>
+                <h5>Retrive the best summary from text.<h5>
+                </div>
+            </div>
+           
+        </div>
+    
+        
+        <div class="container" style="display: flex; justify-content: space-around;">
+            <p class="Original_title col-sm-4">Original Text</p>
+            <p class="Summary_title col-sm-4">Summary</p>
+        </div>
+    
+        <div class="container srt">
+            <p class="OriginalTxt col-sm-6"> {{original_txt}}</p>
+            <p class="SummaryTxt col-sm-6"> {{summary}}</p>
+     
+        </div>
+    
+        <div class="container" id="word_length">
+            <button class="btn btn-danger"  type="submit" >Words: {{len_orin_txt}}</button>
+            <button class="btn btn-success" type="submit" >Words: {{len_summary}}</button>
+    
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </div>
+    
+</body>
+</html>

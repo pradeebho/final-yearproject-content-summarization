@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Adding Roboto and Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap"
+          rel="stylesheet">
+    <!--Add web.css to this HTML file.-->
+    <link rel="stylesheet" href="/static/web.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Add title to this HTML file.-->
+    <title>Content summarizer</title>
+
+    <link href="/static/favicon.png" rel="icon">
+
+    <meta content="Online Tool to summarize transcript of an eligible YouTube Video and large text. The video should have well formatted closed-captions to perform summarization by various techniques."
+          name="description">
+   
+
+    <meta name="robots" content="index,follow"/>
+
+    <meta property='og:title' content="YouTube Summarizer Web | Summarize"/>
+    <meta property='og:image' content='image_cover.png'/>
+    <meta property='og:description'
+          content="Online Tool to summarize transcript of an eligible YouTube Video. The video should have well formatted closed-captions to perform summarization by various techniques."/>
+    <!-- <meta property='og:url' content='https://ytsum.herokuapp.com/web/'/> -->
+</head>
+<body>
+<!--Titles-->
+<h1 style="font-size: 50px;">Content Summarizer</h1>
+<h3 style="font-family: 'Open Sans', sans-serif; font-weight: 30px;">Get Summarization Done<br>Directly within your
+    browser.</h3>
+<!--YouTube Div: Only Visible when it is YouTube URL-->
+<div class="container">
+
+</div>
+<div id="youtube" >
+    <label for="url_input">Type YouTube Video URL here</label><br>
+    <input type="text" id="url_input">
+    <br>
+    <br>
+    <label for="text_input">Or Copy and Paste your text here</label><br>
+    <!-- <input type="text" id="text_input"> -->
+    <textarea id="text_input" minlength="300" maxlength="5000" name="text" size="5000" style="width:600px;height:200px;padding: 2px;"></textarea>
+    <br>
+    <br>
+    <!--Summary Choice Selection Dropdown-->
+    <div class="custom-select">
+        <label for="summary-dropdown">Choose Your Summarization Algorithm</label><br>
+        <select id="summary-dropdown">
+            <option class="dropdown-text" value="0">Summary Algorithm</option>
+            <option class="dropdown-text" value="1">Text Rank Algorithm Based (Gensim)</option>
+            <option class="dropdown-text" value="2">Frequency Based (NLTK)</option>
+            <option class="dropdown-text" value="3">Frequency Based (Spacy)</option>
+            <option class="dropdown-text" value="4">Latent Semantic Analysis Based (Sumy)</option>
+            <option class="dropdown-text" value="5">Luhn Algorithm Based (Sumy)</option>
+            <option class="dropdown-text" value="6">Text Rank Algorithm Based (Sumy)</option>
+        </select>
+        <br>
+        
+    </div>
+    <br>
+    <!--Percent Selection Dropdown-->
+    <label for="percent-dropdown">Select a percentage(Tip: Select 20 or 30)</label><br>
+    <div class="custom-select" >
+        <select id="percent-dropdown">
+            <option class="dropdown-text" value="0">Summary %</option>
+            <option class="dropdown-text" value="1">10%</option>
+            <option class="dropdown-text" value="2">20%</option>
+            <option class="dropdown-text" value="3">30%</option>
+            <option class="dropdown-text" value="4">40%</option>
+            <option class="dropdown-text" value="5">50%</option>
+            <option class="dropdown-text" value="6">60%</option>
+            <option class="dropdown-text" value="7">70%</option>
+        </select>
+        <br>
+        
+    </div>
+   
+    <button class="button" style="margin-top: -5px;" id="my_button" disabled><b>Summarize</b></button>
+</div>
+
+<div id="text_out_main" style="display: none;">
+    <h4 id="current_process">Generating Summary</h4>
+    <div id="text-out">Please Wait</div>
+    <button class="button" style="margin:auto; display: none" id="download_button"><b>Download Script</b></button>
+    <h5 id="re_summarize" style="display: none;">
+        Click <a href="javascript:location.reload();">here</a> to summarize another video.</h5>
+</div>
+<!-- 
+<div id="text_out_main_sum" style="display: none;">
+    <h4 id="current_process_sum">Generating Summary</h4>
+    <div id="text-out-sum">Please Wait</div>
+    <button class="button" style="margin:auto; display: none" id="download_button"><b>Download Script</b></button>
+    <h5 id="re_summarize_sum" style="display: none;">
+        Click <a href="javascript:location.reload();">here</a> to summarize another video.</h5>
+</div> -->
+
+<script src="/static/web2.js"></script>
+<!-- <script src="{{ url_for('static', filename='web.js')}}"></script> -->
+
+
+</body>
+</html>

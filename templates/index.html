@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9298062752.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+
+        <script>
+            function validateContent()
+            {
+                let x=document.forms["content"]["url"].value;
+                let y=document.forms["content"]["text"].value;
+                if(x=="" || y=="")
+                    alert("Please insert the fields");
+                    return false;
+            }
+        </script>
+
+</head>
+<body>
+    <header class="header">
+        <nav class='navbar'>
+            <div class="container">
+                <h1 class="logo lg-heading">CS</h1> 
+                <ul class="nav-items">
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="home">
+            <h2>CONTENT SUMMARIZER</h2>
+            <div class="input">
+                <form name="content" action="summarize.html" onsubmit="return validateContent()" method="post">
+                
+                    <p>Input the page url you want summarize:</p>
+                    <textarea name="url" id="url" size="500" style="width:600px;height:50px"></textarea></textarea>
+                    <br>
+                    <p>Or Copy and paste your text into the box:</p>
+                    <textarea id="text" maxlength="50000" name="text" size="5000" style="width:600px;height:250px"></textarea>
+                    <button type="submit" class="form-btn">Submit</button>
+            
+                </form>
+            </div>
+           
+        </div>
+    </header>
+    <section class='showcase' id="about">
+        <div class="container">
+            <div class="row row1">
+                <div class="img-box">
+                    <img src="img1.jpg" alt="books">
+                </div>
+                <div class="text-box">
+                    <h2 class="md-heading">Why Content Summarizer</h2>
+                    <p class="text-gray">A large number of videos are recorded and are being created and shared on a large scale on the internet throughout the day. It has become really difficult to watch longer duration videos and to read large text content which may lead to wastage of time. Sometimes our efforts may become useless if we couldn’t find the required information out of it. Content Summarization will allow us to quickly look over the important content and helps us to save time and efforts.</p>
+                        
+                </div>
+            </div>    
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social-media-links">
+            <i class="fab fa-facebook fa-4x"></i>
+            <i class="fab fa-twitter fa-4x"></i>
+            <i class="fab fa-instagram fa-4x"></i>
+        </div>
+        <p class="foot">Content Summarizer &copy; 2023, All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
